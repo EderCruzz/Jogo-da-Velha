@@ -8,30 +8,63 @@
     <title>Jogo da Velha</title>
 </head>
 <body>
+    <h1 class="header">Jogo da Velha</h1>
 
-    <h1>Jogo da Velha</h1>
+    <div class="structure">
+        <div class="stage">
+            <div>
+                <div id="0" class="square">
 
-    <div class="stage">
-        <div>
-            <div id="0" class="square"></div>
-            <div id="1" class="square"></div>
-            <div id="2" class="square"></div>
+                </div>
+                <div id="1" class="square">
+
+                </div>
+                <div id="2" class="square"></div>
+            </div>
+            <div>
+                <div id="3" class="square"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square"></div>
+            </div>
+            <div>
+                <div id="6" class="square"></div>
+                <div id="7" class="square"></div>
+                <div id="8" class="square"></div>
+            </div>
+
         </div>
-        <div>
-            <div id="3" class="square"></div>
-            <div id="4" class="square"></div>
-            <div id="5" class="square"></div>
-        </div>
-        <div>
-            <div id="6" class="square"></div>
-            <div id="7" class="square"></div>
-            <div id="8" class="square"></div>
+
+        <div class="container">
+            <div class="players">
+                <h2 class="scoreboard">Jogadores</h2>
+                <div class="player_container">
+                    <img id="noughtIcon" src="./assets/icons/ball.png">
+                    <input class="inp1" id="player1" type="text" placeholder="Jogador 1">
+                </div>
+                <div class="player_container">
+                    <img id="crossIcon" src="./assets/icons/8-ball.png">
+                    <input class="inp1" id="player2" type="text" placeholder="Jogador 2">
+                </div>
+
+
+            </div>
+            <div class="numberOfWins">
+                <h2 class="scoreboard">Pontuação</h2>
+                <h3 class="punctuation" id="player1Wins"></h3>
+                <h3 class="punctuation" id="player2Wins"></h3>
+            </div>
+
         </div>
     </div>
-    
 
 
-    <script src="scripts/game.js"></script>
-    <script src="scripts/interface.js"></script>
+    <button id="btnRestart" onclick="restartGame()"> Reiniciar jogo</button>
+    <button id="btnRestartWins" onclick="restartWins()"> Resetar pontuação</button>
+
+
+    <!-- carrega primeiro o game pois a interface irá precisar dela  -->
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/interface.js"></script>
+
 </body>
 </html>
